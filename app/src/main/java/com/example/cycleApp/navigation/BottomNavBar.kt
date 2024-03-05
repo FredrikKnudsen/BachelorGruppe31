@@ -14,10 +14,8 @@ import com.example.cycleApp.R
 
 @Composable
 fun BottomNavBar(
-    onForYouClick: () -> Unit,
-    onSearchClick: () -> Unit,
-    onSavedClick: () -> Unit,
-    onSettingsClick: () -> Unit
+    onHomeClick: () -> Unit,
+
 ) {
     Row(
         modifier = Modifier.run {
@@ -30,7 +28,7 @@ fun BottomNavBar(
             contentDescription = "For You Icon",
             modifier = Modifier
                 .size(40.dp)
-                .clickable { onForYouClick() }
+                .clickable { onHomeClick() }
         )
         Spacer(modifier = Modifier.weight(1f))
         Image(
@@ -38,7 +36,7 @@ fun BottomNavBar(
             contentDescription = "Search Icon",
             modifier = Modifier
                 .size(40.dp)
-                .clickable { onSearchClick() }
+                .clickable { onHomeClick() }
         )
         Spacer(modifier = Modifier.weight(1f))
         Image(
@@ -46,7 +44,7 @@ fun BottomNavBar(
             contentDescription = "Saved Icon",
             modifier = Modifier
                 .size(40.dp)
-                .clickable { onSavedClick() }
+                .clickable { onHomeClick() }
         )
         Spacer(modifier = Modifier.weight(1f))
         Image(
@@ -54,7 +52,7 @@ fun BottomNavBar(
             contentDescription = "Settings Icon",
             modifier = Modifier
                 .size(40.dp)
-                .clickable { onSettingsClick() }
+                .clickable { onHomeClick() }
         )
     }
 }
